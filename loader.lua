@@ -1,4 +1,4 @@
--- final skid boss of vape v4 (i need to kms)
+-- final skid boss of vape v4 (ineedtokms)
 local isfile = isfile or function(file)
 	local suc, res = pcall(function()
 		return readfile(file)
@@ -12,7 +12,7 @@ end
 local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/C4ainikT/AugustusB2.6forRoblox'..readfile('Augustus/commit.txt')..'/'..select(1, path:gsub('Augustus/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/C4ainikT/AugustusB2.6forRoblox/'..readfile('Augustus/commit.txt')..'/'..select(1, path:gsub('Augustus/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -56,7 +56,5 @@ if not shared.AugustusTesting then
 	end
 	writefile('Augustus/commit.txt', commit)
 end
-
-print(1)
 
 return loadstring(downloadFile('Augustus/main.lua'), 'main')()
