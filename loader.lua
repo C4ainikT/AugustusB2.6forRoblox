@@ -57,4 +57,6 @@ if not shared.AugustusTesting then
 	writefile('Augustus/commit.txt', commit)
 end
 
+print(1)
+
 return loadstring(downloadFile('Augustus/main.lua'), 'main')()
